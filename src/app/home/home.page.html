@@ -2,6 +2,10 @@
 	<section class="time-selector" [ngClass]="{ 'hide' : showColor }">
 		<div class="input-holder">
 			<input type="tel" placeholder="Minutes" [(ngModel)]="totalMinutes">
+			<div class="confirm-exit">
+				<ion-checkbox [(ngModel)]="isExit" mode="ios"></ion-checkbox>
+				<label> Exit on Interuption / End of the flow? </label>
+			</div>
 			<ion-button (click)="startCount()" [disabled]="!totalMinutes"> Start </ion-button>
 		</div>
 	</section>

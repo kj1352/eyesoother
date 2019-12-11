@@ -48,6 +48,20 @@ ion-content {
 		}
 	}
 
+	.confirm-exit {
+		color: #cecece;
+		font-size: 20px;
+		letter-spacing: 1px;
+		width: 80%;
+		margin: 0 auto 20px;
+		text-align: center;
+
+		ion-checkbox {
+			--size: 20px;
+			margin-right: 10px;
+		}
+	}
+
 
 	ion-button {
 		margin: 0 auto;

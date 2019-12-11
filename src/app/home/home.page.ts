@@ -11,6 +11,7 @@ export class HomePage {
 	countInterval: any;
 	displayColor: string;
 	showColor: boolean = false;
+	isExit: boolean = true;
 
 	constructor() {
 		this.displayColor = this.getRandomColor();
@@ -24,8 +25,7 @@ export class HomePage {
 			this.displayColor = this.getRandomColor();
 			seconds -= 3;
 			if (seconds <= 0){
-				clearInterval(this.countInterval);
-				this.showColor = false;
+				this.stopColor();
 			};
 		}, 3000);
 	}
@@ -34,6 +34,7 @@ export class HomePage {
 		this.totalMinutes = null;
 		this.showColor = false;
 		clearInterval(this.countInterval);
+		this.isExit? navigator['app'].exitApp(): null;
 	}
 
 	getRandomColor() {
