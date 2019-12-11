@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
+
 
 @Component({
 	selector: 'app-home',
@@ -13,7 +15,8 @@ export class HomePage {
 	showColor: boolean = false;
 	isExit: boolean = true;
 
-	constructor() {
+	constructor(private androidFullScreen: AndroidFullScreen) {
+		this.androidFullScreen.immersiveMode();
 		this.displayColor = this.getRandomColor();
 	}
 
